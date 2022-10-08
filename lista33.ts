@@ -30,10 +30,9 @@
 
 console.log(OrganizarNumeros(71236412890))
 
-function OrganizarNumeros(numero : number){
+function OrganizarNumeros(numero : number) : number{
+    console.log("Número inicial: " +numero)
     let arrayNumeros : string[] = numero.toString().split('')
-    console.log(arrayNumeros)
     let numeroOrganizado : string = arrayNumeros.sort((a, b) => parseInt(b) - parseInt(a)).join('')
-    console.log(numeroOrganizado)
     return parseInt(numeroOrganizado)
 }
