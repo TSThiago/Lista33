@@ -7,23 +7,24 @@
 //     return teste1.split('').length
 // }
 // Ex 2:
-// console.log(MostrarCaractereDoMeio("jogando"))
-// function MostrarCaractereDoMeio(palavra: string) : string{
-//     let arrayPalavra : string[] = palavra.split('')
-//     console.log(arrayPalavra)
-//     if(arrayPalavra.length % 2 == 0){
-//         let caracteresDoMeio :string[] = []
-//         caracteresDoMeio.push(arrayPalavra[(arrayPalavra.length/2) - 1],arrayPalavra[arrayPalavra.length/2]) 
-//         return caracteresDoMeio.join('') 
-//     }else{
-//         return arrayPalavra[(arrayPalavra.length/2) - 0.5]
-//     }
-// }
-// Ex 3:
-console.log(OrganizarNumeros(71236412890));
-function OrganizarNumeros(numero) {
-    console.log("Número incial: " + numero);
-    var arrayNumeros = numero.toString().split('');
-    var numeroOrganizado = arrayNumeros.sort(function (a, b) { return parseInt(b) - parseInt(a); }).join('');
-    return parseInt(numeroOrganizado);
+console.log(MostrarCaractereDoMeio("código"));
+function MostrarCaractereDoMeio(palavra) {
+    // let arrayPalavra : string[] = palavra.split('')
+    // console.log(arrayPalavra)
+    if (palavra.length % 2 == 0) {
+        // let caracteresDoMeio :string[] = []
+        return palavra[(palavra.length / 2) - 1] + palavra[palavra.length / 2];
+        // return caracteresDoMeio.join('') 
+    }
+    else {
+        return palavra[Math.floor(palavra.length / 2)];
+    }
 }
+// Ex 3:
+// console.log(OrganizarNumeros(71236412890))
+// function OrganizarNumeros(numero : number) : number{
+//     console.log("Número inicial: " +numero)
+//     let arrayNumeros : string[] = numero.toString().split('')
+//     let numeroOrganizado : string = arrayNumeros.sort((a, b) => parseInt(b) - parseInt(a)).join('')
+//     return parseInt(numeroOrganizado)
+// }
